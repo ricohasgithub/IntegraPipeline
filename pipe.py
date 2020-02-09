@@ -23,7 +23,7 @@ def stream_handler(message):
     print(message["path"]) # /-K7yGTTEp7O549EzTYtI
     print(message["data"]) # {'title': 'Pyrebase', "body": "etc..."}
 
-    firebase_db.child("users").child(username).child("read").push(
+    firebase_db.child("users").child(username).child("read").set(
         {
             "message": response
         }
